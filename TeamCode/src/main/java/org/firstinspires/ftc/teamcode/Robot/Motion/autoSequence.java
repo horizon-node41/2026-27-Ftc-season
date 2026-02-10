@@ -2,13 +2,11 @@ package org.firstinspires.ftc.teamcode.Robot.Motion;
 
 import static android.os.SystemClock.sleep;
 
-import org.firstinspires.ftc.teamcode.Robot.drive;
-
 public class autoSequence {
-    private drive robot;
+    private protoDrive robot;
 
     // Constructor: Needs a drive object to work
-    public autoSequence(drive drive) {
+    public autoSequence(protoDrive drive) {
         this.robot = drive;
     }
 
@@ -21,12 +19,6 @@ public class autoSequence {
 
     public autoSequence rotateDegrees(double degrees) {
         robot.rotateDegrees(degrees);
-        return this;
-    }
-
-    // You can add special "Sequence only" methods here too
-    public autoSequence wait(long milliseconds) {
-        sleep(milliseconds);
         return this;
     }
 }
